@@ -23,7 +23,7 @@ gulp.task('bundle', function() { //transform JSX to JS
 	.pipe(gulp.dest('./.tmp'));
 });
 
-gulp.task('serve', ['live-server'], function() {
+gulp.task('serve', ['bundle', 'live-server'], function() {
 	browserSync.init(null, {
 		proxy: "http://localhost:3000",
 		port: 9001
