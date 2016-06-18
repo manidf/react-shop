@@ -1,0 +1,17 @@
+{
+  "name": "react-shop",
+  "description": "",
+  "main": "index.ejs",
+  "authors": [
+    "Mannuel Ferreira"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
