@@ -1,8 +1,16 @@
-var React = require(react);
-var ReactAddons = require(react/addons);
+var React = require('react');
+var ReactAddons = require('react-addons-update');
 
-var GroceryItemList = require('./components/GroceryItemList.jsx');
+var MobilePhoneList = require('./components/MobilePhoneList.jsx');
 
 console.log('hello from JSX');
 
-react.render(<GroceryItemList />, app);
+var initial = [
+	{ name: "Shoes" },
+	{ name: "Trousers", puchased: true },
+	{ name: "Hats" },
+	{ name: "Watches" },
+	{ name: "Sandles" }
+];
+
+React.render(<MobilePhoneList items={initial} />, app);
