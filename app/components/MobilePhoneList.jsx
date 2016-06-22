@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactAddons = require('react-addons-update');
+var StockItem = require('./StockItem.jsx');
 
 module.exports = React.createClass({
 	render: function() {
@@ -9,7 +10,7 @@ module.exports = React.createClass({
 				<div>
 					{this.props.items.map(function(item, index) {
 						return (
-							<div>{item.name}</div>
+							<StockItem item={item} key={"item"+index} />
 						)
 					})
 					}

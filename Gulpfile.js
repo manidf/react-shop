@@ -11,7 +11,12 @@ gulp.task('live-server', function() {
 	server.start();
 });
 
-gulp.task('bundle', function() { //transform JSX to JS
+gulp.task('copy', function(){
+	gulp.src(['app/*.css'])
+		.pipe(gulp.dest('./.tmp'));
+});
+
+gulp.task('bundle',['copy'], function() { //transform JSX to JS
 	return browserify({
 		// pass the starting point
 		entries: 'app/main.jsx',
