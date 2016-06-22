@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactAddons = require('react-addons-update');
 var StockItem = require('./StockItem.jsx');
+var StockItemAddItem = require('./StockItemAddItem.jsx');
 
 module.exports = React.createClass({
 	render: function() {
@@ -15,6 +16,7 @@ module.exports = React.createClass({
 					})
 					}
 				</div>
+				<StockItemAddItem />
 			</div>
 		)
 	}
