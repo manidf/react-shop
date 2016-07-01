@@ -1,15 +1,18 @@
-var React = require('react');
-var ReactAddons = require('react-addons-update');
+var React = require('react')
+var ReactAddons = require('react-addons-update')
 
-var MobilePhoneList = require('./components/MobilePhoneList.jsx');
+var MobilePhoneList = require('./components/MobilePhoneList.jsx')
 
-var initial = [
-	{ name: "Shoes" },
-	{ name: "Trousers", purchased: true },
-	{ name: "Hats" },
-	{ name: "Watches" },
-	{ name: "Sandles" }
-];
-console.log("List:", initial);
+var stockItemStore = require('./stores/StockItemStore.jsx')
+var initial = stockItemStore.getItems()
 
-React.render(<MobilePhoneList items={initial} />, app);
+console.log("List:", initial)
+function render() {
+	React.render(<MobilePhoneList items={initial} />, app)
+}
+stockItemStore.onChange(function(items) {
+	initial = items
+	render()
+})
+
+render()
