@@ -1,13 +1,9 @@
 var dispatcher = require('../dispatcher.js')
 
 function StockItemStore() {
-    var items = [
-        { name: "Shoes" },
-        { name: "Trousers", purchased: true },
-        { name: "Hats" },
-        { name: "Watches" },
-        { name: "Sandles" }
-    ]
+
+		var items = [ { name: "Shoes" }, { name: "Trousers", purchased: true }, { name: "Hats" }, { name: "Watches" }, { name: "Sandles" }];
+
     var listeners = []
 
     function getItems() {

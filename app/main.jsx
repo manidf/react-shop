@@ -4,7 +4,7 @@ var ReactAddons = require('react-addons-update')
 var MobilePhoneList = require('./components/MobilePhoneList.jsx')
 
 var stockItemStore = require('./stores/StockItemStore.jsx')
-var initial = stockItemStore.getItems()
+// var initial = stockItemStore.getItems()
 
 console.log("List:", initial)
 function render() {
